@@ -44,6 +44,10 @@ public class InicioSesionController implements Initializable {
      */
     ControladorUsuario controlauser= new ControladorUsuario();
     
+    // comentario agregado
+    
+    
+    
     // instanciamiento de los componentes
     
     @FXML
