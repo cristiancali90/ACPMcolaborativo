@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" blendMode="SRC_OVER" cache="true" cacheHint="DEFAULT" depthTest="DISABLE" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Interfaz.InicioSesionController">
+  <children>
+    <Button fx:id="btnConectar" blendMode="SRC_OVER" cancelButton="false" defaultButton="false" layoutX="285.0" layoutY="290.0" mnemonicParsing="false" onAction="#conectar" prefHeight="30.0" prefWidth="117.0" text="Acceder" textAlignment="LEFT" textFill="BLACK" underline="false" wrapText="true">
+      <effect>
+        <Reflection>
+          <input>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="RED" />
+              </light>
+            </Lighting>
+          </input>
+        </Reflection>
+      </effect>
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label font="$x1" layoutX="225.0" layoutY="156.0" prefWidth="60.0" text="Usuario" />
+    <Label font="$x1" layoutX="225.0" layoutY="207.0" prefWidth="69.0" text="Contraseña" />
+    <PasswordField fx:id="txtContrasena" layoutX="329.0" layoutY="207.0" prefHeight="30.0" prefWidth="200.0">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant color="RED" />
+          </light>
+        </Lighting>
+      </effect>
+    </PasswordField>
+    <HBox id="HBox" alignment="CENTER" layoutX="329.0" layoutY="145.0" spacing="5.0">
+      <children>
+        <TextField fx:id="txtUsuario" depthTest="DISABLE" prefHeight="30.0" prefWidth="200.0">
+          <effect>
+            <Lighting>
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="RED" />
+              </light>
+            </Lighting>
+          </effect>
+        </TextField>
+      </children>
+    </HBox>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="Imagenes/logo-login.png" />
+      </image>
+    </ImageView>
+    <Label fx:id="lblMensaje" layoutX="329.0" layoutY="181.0" prefWidth="200.0" text="" textFill="#ff7a00">
+      <font>
+        <Font name="System Bold Italic" size="14.0" />
+      </font>
+    </Label>
+    <Hyperlink id="link" contentDisplay="TOP" layoutX="268.0" layoutY="349.0" prefWidth="151.0" text="Olvide mi contraseña" textAlignment="CENTER" textFill="#3354ff" wrapText="false" fx:id="link" onAction="#olvidoContrasena" />
+  </children>
+</AnchorPane>

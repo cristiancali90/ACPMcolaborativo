@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Interfaz.PrincipalAdminController">
+  <children>
+    <ImageView fitHeight="516.000033504407" fitWidth="688.0" layoutX="58.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+    <TabPane layoutX="52.0" layoutY="89.0" prefHeight="484.0" prefWidth="694.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Usuarios">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField fx:id="txtConsultar" layoutX="137.0" layoutY="114.0" prefWidth="200.0" />
+                <Button fx:id="btnBuscar" layoutX="356.0" layoutY="115.0" mnemonicParsing="false" prefWidth="110.66665649414062" text="Buscar" />
+                <Label layoutX="38.0" layoutY="117.0" text="Buscar Usuario" />
+                <TableView fx:id="tabla" layoutX="38.0" layoutY="176.0" onMouseClicked="#getselectTabla" prefHeight="200.0" prefWidth="629.0" />
+                <Label layoutX="266.0" layoutY="34.0" text="Gestión De Usuario">
+                  <font>
+                    <Font name="System Bold" size="20.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <ImageView fitHeight="83.0" fitWidth="110.66666666666666" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="btnRegistrar" layoutX="50.0" layoutY="396.0" mnemonicParsing="false" onAction="#llamarRegistrar" prefWidth="119.0" text="Registrar" />
+                <Button fx:id="btnModificar" layoutX="297.0" layoutY="396.0" mnemonicParsing="false" onAction="#mostrarDialogoMod" prefWidth="119.0" text="Modificar" />
+                <Button fx:id="btnDesactivar" layoutX="521.0" layoutY="396.0" mnemonicParsing="false" onAction="#confirmaDesactivar" prefWidth="119.0" text="Desactivar" />
+                <Button fx:id="btnlistar" layoutX="525.0" layoutY="114.0" mnemonicParsing="false" onAction="#mostrarUsuarios" prefWidth="110.66665649414062" text="Listar" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Acpm">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TextField layoutX="128.0" layoutY="115.0" prefWidth="200.0" />
+                <Button layoutX="356.0" layoutY="116.0" mnemonicParsing="false" prefWidth="105.0" text="Buscar" />
+                <Label layoutX="38.0" layoutY="118.0" text="Buscar ACPM" />
+                <TableView layoutX="38.0" layoutY="175.0" prefHeight="200.0" prefWidth="607.0" />
+                <ImageView fitHeight="86.0" fitWidth="114.66666666666666" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                <Label font="$x1" layoutX="327.0" layoutY="25.0" text="ACPM" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <ToolBar layoutX="52.0" layoutY="46.0" prefWidth="694.0">
+      <items>
+        <Button fx:id="btnAyuda" mnemonicParsing="false" text="Ayuda" />
+        <Button fx:id="btnCerrar" mnemonicParsing="false" onAction="#llamarLogin" text="Cerrar Sesion" />
+      </items>
+    </ToolBar>
+  </children>
+</AnchorPane>
